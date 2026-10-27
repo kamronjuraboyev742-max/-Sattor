@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>MENGA — Zamonaviy IT xizmatlar va biznes yechimlar</title>
+    <meta name="description" content="MENGA kompaniyasi startaplar va bizneslar uchun zamonaviy IT yechimlar yaratadi. Biz bilan muvaffaqiyat sari qadam tashlang!">
+    <meta name="keywords" content="IT xizmatlar, Startaplar uchun yechim, Biznes IT konsalting, Web rivojlantirish, Mobil ilovalar">
+    <link rel="canonical" href="https://sattor.biznessgo" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkGray: '#1F2937',
+                        blueAccent: '#2563EB',
+                        blueHover: '#1D4ED8',
+                        lightBg: '#F9FAFB'
+                    },
+                    animation: {
+                        'float': 'floating 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        floating: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .gradient-text { background: linear-gradient(90deg, #2563EB, #1F2937);   -webkit-text-fill-color: transparent; }
+        .dark .gradient-text { background: linear-gradient(90deg, #3B82F6, #FFFFFF);  -webkit-text-fill-color: transparent; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #2563EB; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-white dark:bg-gray-950 text-darkGray dark:text-gray-100 transition-colors duration-500">
+
+    <nav id="navbar" class="fixed w-full z-[1000] transition-all duration-300 py-6 px-6 lg:px-20">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-blueAccent rounded-lg flex items-center justify-center text-white font-black text-xl">M</div>
+                <span class="text-xl font-black tracking-tighter">@sattor.<span class="text-blueAccent">biznessgo</span></span>
+            </div>
+            
+            <div class="hidden lg:flex space-x-8 font-bold text-sm uppercase tracking-widest">
+                <a href="#services" class="hover:text-blueAccent transition">Xizmatlar</a>
+                <a href="#about" class="hover:text-blueAccent transition">Biz haqimizda</a>
+                <a href="#portfolio" class="hover:text-blueAccent transition">Portfolio</a>
+                <a href="#blog" class="hover:text-blueAccent transition">Blog</a>
+            </div>
+
+            <div class="flex items-center space-x-6">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                    <i id="theme-toggle-dark-icon" class="hidden fas fa-moon"></i>
+                    <i id="theme-toggle-light-icon" class="hidden fas fa-sun"></i>
+                </button>
+                <select class="bg-transparent font-bold text-sm outline-none cursor-pointer">
+                    <option value="uz">UZ</option>
+                    <option value="en">EN</option>
+                    <option value="ru">RU</option>
+                </select>
+                <a href="#contact" class="hidden md:block bg-blueAccent text-white px-8 py-3 rounded-full font-bold hover:bg-blueHover shadow-lg shadow-blue-500/30 transition transform hover:-translate-y-1">Bog‘lanish</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-blueAccent/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-blueAccent/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h1 data-aos="fade-up" data-aos-duration="1000" class="text-5xl md:text-8xl font-black mb-8 leading-tight tracking-tighter">
+                Kelajakni bugundan <br> <span class="gradient-text">yaratamiz</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="200" class="max-w-3xl mx-auto text-lg md:text-2xl text-gray-500 dark:text-gray-400 mb-12">
+                Biz startaplar va bizneslar uchun zamonaviy IT yechimlar yaratamiz. Global bozorda o'z o'rningizni biz bilan toping.
+            </p>
+            <div data-aos="fade-up" data-aos-delay="400" class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#contact" class="bg-blueAccent text-white px-12 py-5 rounded-2xl font-black text-xl shadow-2xl hover:bg-blueHover transition-all flex items-center justify-center">
+                    Bog‘lanish <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+                <button onclick="openModal('intro')" class="border-2 border-darkGray dark:border-white px-12 py-5 rounded-2xl font-black text-xl hover:bg-darkGray hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">
+                    Demo olish
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 border-y border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-sm font-bold text-gray-400 uppercase tracking-[0.3em] mb-10">Global Hamkorlarimiz</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+                <i class="fab fa-microsoft text-4xl"></i>
+                <i class="fab fa-google text-4xl"></i>
+                <i class="fab fa-aws text-4xl"></i>
+                <i class="fab fa-apple text-4xl"></i>
+                <i class="fab fa-cisco text-4xl"></i>
+                <i class="fab fa-github text-4xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="py-24">
+        <div class="container mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-12">
+            <div data-aos="zoom-in" class="text-center">
+                <div class="text-5xl md:text-7xl font-black text-blueAccent mb-2 counter" data-target="500">0</div>
+                <p class="font-bold text-gray-500 uppercase tracking-widest text-xs">Muvaffaqiyatli Loyihalar</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="100" class="text-center">
+                <div class="text-5xl md:text-7xl font-black text-blueAccent mb-2 counter" data-target="120">0</div>
+                <p class="font-bold text-gray-500 uppercase tracking-widest text-xs">Global Mijozlar</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="200" class="text-center">
+                <div class="text-5xl md:text-7xl font-black text-blueAccent mb-2 counter" data-target="10">0</div>
+                <p class="font-bold text-gray-500 uppercase tracking-widest text-xs">Yillik Tajriba</p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300" class="text-center">
+                <div class="text-5xl md:text-7xl font-black text-blueAccent mb-2 counter" data-target="95">0</div>
+                <p class="font-bold text-gray-500 uppercase tracking-widest text-xs">Tavsiya Foizi</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-lightBg dark:bg-gray-900">
+        <div class="container mx-auto px-6 text-center mb-20">
+            <h2 class="text-4xl md:text-6xl font-black tracking-tighter mb-4">Biz nima qilamiz?</h2>
+            <p class="text-gray-500 max-w-xl mx-auto text-lg">Biznesingizni raqamlashtirish uchun eng ilg'or yechimlar to'plami.</p>
+        </div>
+        
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div onclick="openModal('web')" data-aos="fade-up" class="group p-10 bg-white dark:bg-gray-800 rounded-[40px] shadow-xl hover:shadow-2xl transition-all cursor-pointer border border-transparent hover:border-blueAccent">
+                <div class="w-20 h-20 bg-blue-50 dark:bg-gray-700 rounded-3xl flex items-center justify-center text-3xl text-blueAccent mb-8 group-hover:scale-110 transition">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Web Ecosystems</h3>
+                <p class="text-gray-500 dark:text-gray-400 mb-6">Murakkab web tizimlar, CRM va ERP platformalarini noldan quramiz.</p>
+                <span class="font-black text-blueAccent group-hover:ml-2 transition-all">Batafsil →</span>
+            </div>
+            <div onclick="openModal('app')" data-aos="fade-up" data-aos-delay="100" class="group p-10 bg-white dark:bg-gray-800 rounded-[40px] shadow-xl hover:shadow-2xl transition-all cursor-pointer border border-transparent hover:border-blueAccent">
+                <div class="w-20 h-20 bg-blue-50 dark:bg-gray-700 rounded-3xl flex items-center justify-center text-3xl text-blueAccent mb-8 group-hover:scale-110 transition">
+                    <i class="fas fa-mobile-screen"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Mobile Apps</h3>
+                <p class="text-gray-500 dark:text-gray-400 mb-6">iOS va Android uchun foydalanuvchilar sevib ishlatadigan ilovalar.</p>
+                <span class="font-black text-blueAccent group-hover:ml-2 transition-all">Batafsil →</span>
+            </div>
+            <div onclick="openModal('ai')" data-aos="fade-up" data-aos-delay="200" class="group p-10 bg-white dark:bg-gray-800 rounded-[40px] shadow-xl hover:shadow-2xl transition-all cursor-pointer border border-transparent hover:border-blueAccent">
+                <div class="w-20 h-20 bg-blue-50 dark:bg-gray-700 rounded-3xl flex items-center justify-center text-3xl text-blueAccent mb-8 group-hover:scale-110 transition">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">AI & Big Data</h3>
+                <p class="text-gray-500 dark:text-gray-400 mb-6">Sun'iy intellekt yordamida biznes jarayonlarini avtomatlashtirish.</p>
+                <span class="font-black text-blueAccent group-hover:ml-2 transition-all">Batafsil →</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 container mx-auto px-6">
+        <h2 class="text-3xl font-black mb-12 text-center uppercase tracking-widest">Xalqaro Sertifikatlarimiz</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="p-8 border border-gray-100 dark:border-gray-800 rounded-3xl text-center hover:bg-gray-50 dark:hover:bg-gray-900 transition">
+                <img src="https://cdn-icons-png.flaticon.com/512/625/625393.png" class="w-20 mx-auto mb-4 grayscale hover:grayscale-0 transition" alt="ISO 9001">
+                <h4 class="font-bold">ISO 9001</h4>
+                <p class="text-xs text-gray-400">Sifat standarti</p>
+            </div>
+            </div>
+    </section>
+
+    <section id="blog" class="py-24 bg-gray-50 dark:bg-gray-950">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div>
+                    <h2 class="text-5xl font-black tracking-tighter mb-4">Blog & Yangiliklar</h2>
+                    <p class="text-gray-500">IT dunyosidagi eng so'nggi trendlar.</p>
+                </div>
+                <a href="#" class="text-blueAccent font-bold border-b-2 border-blueAccent pb-1">Barcha maqolalar</a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <article class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-[30px] mb-6">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500" alt="Blog 1">
+                    </div>
+                    <span class="text-xs font-black text-blueAccent uppercase tracking-widest">Texnologiya</span>
+                    <h3 class="text-2xl font-bold mt-2 mb-4 group-hover:text-blueAccent transition">2026-yilda IT bozorida nimalar kutilmoqda?</h3>
+                    <p class="text-gray-500 line-clamp-2">Sun'iy intellekt va kvant kompyuterlari biznesga qanday ta'sir qiladi...</p>
+                </article>
+                </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="bg-darkGray dark:bg-blueAccent rounded-[50px] overflow-hidden flex flex-col lg:flex-row shadow-3xl">
+                <div class="lg:w-1/2 p-12 lg:p-20 text-white">
+                    <h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">G'oyangizni haqiqatga aylantiramiz</h2>
+                    <p class="text-xl opacity-80 mb-12">Biz bilan bog'laning va 24 soat ichida loyihangiz uchun bepul konsultatsiya va tijorat taklifini oling.</p>
+                    
+                    <div class="space-y-8">
+                        <a href="tel:+998944423137" class="flex items-center group">
+                            <div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center mr-6 group-hover:bg-blueAccent transition">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm opacity-60 uppercase tracking-widest font-bold">Telefon</p>
+                                <p class="text-2xl font-black">+998 94 442 31 37</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center group">
+                            <div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center mr-6">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm opacity-60 uppercase tracking-widest font-bold">Email</p>
+                                <p class="text-2xl font-black">hello@sattor.biz</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 bg-white p-12 lg:p-20 text-darkGray">
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-black uppercase tracking-widest mb-2">Ism</label>
+                                <input type="text" placeholder="Sizning ismingiz" class="w-full bg-gray-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-blueAccent transition outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-black uppercase tracking-widest mb-2">Telefon</label>
+                                <input type="tel" placeholder="+998" class="w-full bg-gray-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-blueAccent transition outline-none">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-black uppercase tracking-widest mb-2">Xabar</label>
+                            <textarea rows="4" placeholder="Loyiha haqida qisqacha..." class="w-full bg-gray-50 border-none rounded-xl p-4 focus:ring-2 focus:ring-blueAccent transition outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blueAccent text-white font-black py-5 rounded-2xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1">
+                            XABARNI YUBORISH
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 bg-gray-50 dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center items-center space-x-2 mb-8">
+                <div class="w-8 h-8 bg-blueAccent rounded flex items-center justify-center text-white font-black">M</div>
+                <span class="text-xl font-black tracking-tighter">@sattor.<span class="text-blueAccent">biznessgo</span></span>
+            </div>
+            <p class="text-2xl font-black mb-12 italic">“Kelajakni bugundan yaratamiz”</p>
+            
+            <div class="flex justify-center space-x-8 mb-12">
+                <a href="#" class="text-2xl hover:text-blueAccent transition"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="text-2xl hover:text-blueAccent transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-2xl hover:text-blueAccent transition"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-2xl hover:text-blueAccent transition"><i class="fab fa-behance"></i></a>
+            </div>
+            
+            <div class="text-xs font-bold text-gray-400 uppercase tracking-[0.5em]">
+                &copy; 2026 MENGA DIGITAL AGENCY. BARCHA HUQUQLAR HIMOYALANGAN.
+            </div>
+        </div>
+    </footer>
+
+    <div id="infoModal" class="fixed inset-0 z-[2000] hidden bg-black/95 backdrop-blur-xl flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-900 w-full max-w-5xl max-h-[90vh] overflow-y-auto rounded-[40px] shadow-2xl relative">
+            <button onclick="closeModal()" class="absolute top-8 right-8 text-3xl hover:text-red-500 transition-all z-[10]">
+                <i class="fas fa-times-circle"></i>
+            </button>
+            <div id="modalBody" class="p-8 md:p-20">
+                </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // COUNTER ANIMATION
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target + (target === 95 ? '%' : '+');
+                }
+            };
+            updateCount();
+        });
+
+        // DARK MODE TOGGLE
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            lightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            darkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            darkIcon.classList.toggle('hidden');
+            lightIcon.classList.toggle('hidden');
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+
+        // MODAL CONTENT BANK (10X DATA)
+        const modalData = {
+            'web': {
+                title: "Web & High-Load Ecosystems",
+                content: `
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <div>
+                            <p class="text-xl text-gray-500 mb-8 font-medium">Biz nafaqat sayt, balki biznesingizni avtomatlashtiruvchi murakkab texnologik ekotizim quramiz.</p>
+                            <h4 class="text-2xl font-black mb-4">Texnologik Stack:</h4>
+                            <ul class="space-y-4 mb-8">
+                                <li class="flex items-center"><i class="fas fa-check-circle text-blueAccent mr-3"></i> Frontend: Next.js, React, Tailwind CSS</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-blueAccent mr-3"></i> Backend: Node.js, Python (Django/FastAPI)</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-blueAccent mr-3"></i> Database: PostgreSQL, Redis, MongoDB</li>
+                                <li class="flex items-center"><i class="fas fa-check-circle text-blueAccent mr-3"></i> Infrastructure: AWS, Docker, Kubernetes</li>
+                            </ul>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" class="rounded-[30px] shadow-2xl">
+                    </div>
+                `
+            },
+            'intro': {
+                title: "Biz bilan biznesingizni boshlang",
+                content: `<p class="text-2xl">Demo jarayoni va startaplar uchun maxsus takliflar...</p>`
+            }
+            // Boshqa ma'lumotlar ham shunday qo'shiladi...
+        };
+
+        function openModal(key) {
+            const data = modalData[key] || {title: "Ma'lumot", content: "Yaqinda qo'shiladi..."};
+            document.getElementById('modalBody').innerHTML = `
+                <h2 class="text-5xl font-black mb-10 tracking-tighter">${data.title}</h2>
+                <div class="prose prose-xl dark:prose-invert max-w-none">${data.content}</div>
+                <div class="mt-12 flex space-x-4">
+                    <a href="tel:+998944423137" class="bg-blueAccent text-white px-10 py-4 rounded-2xl font-bold">Hoziroq bog'lanish</a>
+                </div>
+            `;
+            document.getElementById('infoModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('infoModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // SCROLL NAVBAR EFFECT
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/90', 'dark:bg-gray-950/90', 'backdrop-blur-xl', 'py-4', 'shadow-xl');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.remove('bg-white/90', 'dark:bg-gray-950/90', 'backdrop-blur-xl', 'py-4', 'shadow-xl');
+                nav.classList.add('py-6');
+            }
+        });
+    </script>
+</body>
+</html>
